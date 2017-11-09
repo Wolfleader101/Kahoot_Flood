@@ -1,0 +1,8 @@
+{
+  "name": "kahoot_flood",
+  "version": "1.0.0",
+  "description": "a kahoot flooder for educational purposes",
+  "main": "main.js",
+  "author": "Wolfleader101",
+  "license": "MIT"
+}
