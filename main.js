@@ -1,13 +1,15 @@
+
+const {token, Names, Amount} = require('./config.json')
 const Kahoot = require("kahoot.js-updated");
-const clients = Array(60).fill().map(() => {
+const clients = Array(Amount).fill().map(() => {
   return new Kahoot;
 });
-const token = Number(process.argv[2]);
+
 
 
 
 clients.forEach((client, index) => {
-  client.join(token, "BOT" + index, "kahoot.js");
+  client.join(token, Names + index);
 });
 
 clients.forEach(client => {
