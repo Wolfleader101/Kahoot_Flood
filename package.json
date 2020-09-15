@@ -4,5 +4,9 @@
   "description": "a kahoot flooder for educational purposes",
   "main": "main.js",
   "author": "Wolfleader101",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "kahoot.js-updated": "^2.0.9"
+  }
 }

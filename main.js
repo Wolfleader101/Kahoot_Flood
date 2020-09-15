@@ -1,32 +1,17 @@
-const Kahoot = require('kahoot.js');
-const clients = Array(100).fill().map(function() {
-    return new Kahoot
+const Kahoot = require("kahoot.js-updated");
+const clients = Array(60).fill().map(() => {
+  return new Kahoot;
 });
 const token = Number(process.argv[2]);
 
 
-clients.forEach(function(client, index) {
-  console.log("Joined Kahoot Quiz!");
-    client.join(token, "BOT" + index);
+
+clients.forEach((client, index) => {
+  client.join(token, "BOT" + index, "kahoot.js");
 });
 
-
-
-//IGNORE THE FOLLOWING CODE:
-//FOLLOWING CODE IN TESTING
-
-
-
-
-//process.stdout.write(`\n\n\n\n Please Enter Kahoot Token >>`);
- /*
- var twirlTimer = (function() {
-   var P = ["\\", "|", "/", "-"];
-   var x = 0;
-   return setInterval(function() {
-     process.stdout.write("\r" + P[x++]);
-     x &= 3;
-   }, 250);
- })();
-
- */
+clients.forEach(client => {
+  client.on("Joined", () => {
+    console.log("I joined the Kahoot!" + client.clientId);
+  });
+})
