@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "kahoot.js-updated": "^2.0.9"
+    "kahoot.js-updated": "^2.3.2"
   }
 }
