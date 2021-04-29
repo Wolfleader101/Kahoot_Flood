@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: kahoot.js-updated
+    versions:
+    - 2.3.3
+    - 2.3.4
+    - 2.4.0
+    - 3.404.0
